@@ -1,0 +1,31 @@
+{{ if (eq .Type "page") }}
+  <li>
+    <article class="w-full overflow-hidden relative">
+      <h2 class="font-bold text-xl">
+        <a href="{{ .Permalink }}">
+        {{.Title}}</a>
+      </h2>
+    </article>
+  </li>
+{{ else }}
+  <li class="flex border rounded-lg bg-gray-100 items-top justify-center">
+    <article class="w-full overflow-hidden relative">
+      <div
+        class="text-sm leading-none bg-gray-200 text-black font-semibold p-4 tracking-wide"
+        >
+        <header>
+          <h2 class="font-bold text-xl">
+            <a href="{{ .Permalink }}">
+            {{.Title}}</a>
+          </h2>
+        </header>
+      </div>
+      <div class="p-4 w-full">
+        {{ .Summary }}
+        <footer class="mt-4 w-full text-center">
+          <a href="{{ .Permalink }}" class="p-2 bg-green-600 text-white rounded-md"><nobr>Read more →</nobr></a>
+        </footer>
+      </div>
+    </article>
+  </li>
+{{ end }}

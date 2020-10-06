@@ -1,0 +1,28 @@
+<script>
+
+  function toggleHamburgerMenu() {
+    var hamburgerMenu = document.getElementById('hamburgerMenu');
+    if (hamburgerMenu) {
+      var hamburgerButtonClosedPath = document.getElementById('closed-burger');
+      var hamburgerButtonOpenedPath = document.getElementById('opened-burger');
+      if (hamburgerMenu.classList.contains('hidden')) {
+        hamburgerMenu.classList.remove('hidden');
+        if (hamburgerButtonClosedPath && hamburgerButtonOpenedPath) {
+          hamburgerButtonClosedPath.classList.add('hidden')
+          hamburgerButtonClosedPath.classList.remove('inline-flex')
+          hamburgerButtonOpenedPath.classList.add('inline-flex')
+          hamburgerButtonOpenedPath.classList.remove('hidden')
+        }
+      } else {
+        hamburgerMenu.classList.add('hidden');
+        if (hamburgerButtonClosedPath && hamburgerButtonOpenedPath) {
+          hamburgerButtonOpenedPath.classList.add('hidden')
+          hamburgerButtonOpenedPath.classList.remove('inline-flex')
+          hamburgerButtonClosedPath.classList.add('inline-flex')
+          hamburgerButtonClosedPath.classList.remove('hidden')
+        }
+      }
+    }
+  }
+
+</script>

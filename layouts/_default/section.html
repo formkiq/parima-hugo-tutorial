@@ -1,0 +1,26 @@
+{{ define "main" }}
+  <header>
+    <h1 class="font-bold text-3xl">{{.Title}}</h1>
+  </header>
+  <section>
+    {{ .Content }}
+  </section>
+  {{ if .Paginator.Pages }}
+    {{ $scratch := newScratch }}
+    {{ $scratch.Set "containsPosts" false }}
+    {{ range .Paginator.Pages }}
+      {{ if (eq .Type "post") }}
+        {{ $scratch.Set "containsPosts" true }}
+      {{ end }}
+    {{ end }}
+    <section>
+      {{ if ($scratch.Get "containsPosts") }}
+        <ul class="mt-4 items-stretch md:grid md:grid-cols-3 md:col-gap-8 md:row-gap-10">
+          {{ range .Paginator.Pages }}
+            {{ partial "summary.html" . }}
+          {{ end }}
+        </ul>
+      {{ end }}
+    </section>
+  {{ end }}
+{{ end }}

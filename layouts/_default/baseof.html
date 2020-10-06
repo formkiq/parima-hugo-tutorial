@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    {{ block "navbar" . }}{{ end }}
+    <div class="max-w-screen-xl min-h-screen-85 md:min-h-screen-90 mx-auto mb-8 pt-20 px-4">
+      {{ block "main" . }}{{ end }}
+    </div>
+    {{ block "footer" . }}{{ end }}
+  </body>
+  {{ partial "js.html" . }}
+</html>

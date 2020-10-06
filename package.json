@@ -1,0 +1,27 @@
+{
+  "name": "parima-hugo-tutorial",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Tutorial Project for 'How To Generate a Static Website with Hugo framework and Tailwind CSS, and Deploy to AWS Using Parima'",
+  "scripts": {
+    "preinstall": "npx npm-force-resolutions",
+    "start": "gulp dev && hugo server --ignoreCache",
+    "deploy": "gulp build && hugo --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://formkiq/..."
+  },
+  "author": "FormKiQ Inc.",
+  "homepage": "https://formkiq.com",
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-purgecss": "^2.1.2",
+    "gulp-util": "^3.0.8",
+    "tailwindcss": "^1.8.10"
+  }
+}
