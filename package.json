@@ -1,6 +1,6 @@
 {
   "name": "parima-hugo-tutorial",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": false,
   "description": "Tutorial Project for 'How To Generate a Static Website with Hugo framework and Tailwind CSS, and Deploy to AWS Using Parima'",
   "scripts": {
