@@ -1,3 +1,23 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "Parima Hugo Tutorial"
+disableKinds = ["taxonomy","taxonomyTerm"]
+summaryLength = 40
+rssLimit = 10
+
+[outputs]
+    home = ["HTML","RSS"]
+    section  = ["HTML", "RSS"]
+
+[outputFormats]
+    [outputFormats.RSS]
+        mediatype = "application/rss"
+        baseName = "feed"
+
+# for RSS feed
+[author]
+    name = "FormKiQ Inc."
+    email = "info@formkiq.com"
+
+[permalinks]
+    blog = "blog/:title/"
