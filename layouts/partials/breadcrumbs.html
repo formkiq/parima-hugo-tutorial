@@ -5,7 +5,7 @@
   {{ if and (.p1.Parent) (not (eq .p1.File.Dir "/")) }}
     <a
       class="block text-base leading-6 font-semibold text-gray-800 uppercase tracking-wider hover:text-orange-900 focus:text-orange-900"
-      href="{{ .p1.Parent.Permalink }}"
+      href="{{ strings.TrimRight "/" .p1.Parent.Permalink }}"
       >
       {{ .p1.Parent.Title }}</a>
   {{ end }}

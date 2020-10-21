@@ -2,7 +2,7 @@
   <li>
     <article class="w-full overflow-hidden relative">
       <h2 class="font-bold text-xl">
-        <a href="{{ .Permalink }}">
+        <a href="{{ strings.TrimRight "/" .Permalink }}">
         {{.Title}}</a>
       </h2>
     </article>
@@ -15,7 +15,7 @@
         >
         <header>
           <h2 class="font-bold text-xl">
-            <a href="{{ .Permalink }}">
+            <a href="{{ strings.TrimRight "/" .Permalink }}">
             {{.Title}}</a>
           </h2>
           {{ if .Date }}
@@ -26,7 +26,7 @@
       <div class="p-4 w-full">
         {{ .Summary }}
         <footer class="mt-4 w-full text-center">
-          <a href="{{ .Permalink }}" class="p-2 bg-green-600 text-white rounded-md"><nobr>Read more →</nobr></a>
+          <a href="{{ strings.TrimRight "/" .Permalink }}" class="p-2 bg-green-600 text-white rounded-md"><nobr>Read more →</nobr></a>
         </footer>
       </div>
     </article>
