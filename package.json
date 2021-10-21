@@ -15,13 +15,13 @@
   "author": "FormKiQ Inc.",
   "homepage": "https://formkiq.com",
   "devDependencies": {
-    "autoprefixer": "^9.7.6",
+    "autoprefixer": "^10.0.2",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
-    "gulp-postcss": "^8.0.0",
+    "gulp-postcss": "^9.0.1",
     "gulp-purgecss": "^2.1.2",
     "gulp-util": "^3.0.8",
-    "tailwindcss": "^1.8.10"
+    "tailwindcss": "^2.2.17"
   }
 }
